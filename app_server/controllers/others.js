@@ -5,7 +5,7 @@
 // module.exports = {
 //     index
 // };
-const about = (req,res) => {res.render('generic-text', {title:'About us'});
+const about = (req,res) => {res.render('aboutus', {title:'About us'});
 };
 module.exports = {
     about

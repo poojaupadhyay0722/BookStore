@@ -1,5 +1,5 @@
 const homelist = (req,res)=>{
-    res.render('locations-list', {title: 'Home'});
+    res.render('home', {title: 'Home'});
 };
 
 const locationInfo = (req, res) =>{
@@ -7,16 +7,26 @@ const locationInfo = (req, res) =>{
 };
 
 const addReview = (req, res) =>{
-    res.render('location-review-form', {title: 'Add review'});
+    res.render('add-new-book', {title: 'Add review'});
 };
 
 const bookdetails = (req, res) =>{
-    res.render('index', {title: 'Book Details'});
+    res.render('book-details', {title: 'Book Details'});
+};
+
+const editbook = (req, res) =>{
+    res.render('edit-book', {title: 'Edit book'});
+};
+
+const deletebook = (req, res) =>{
+    res.render('delete-book', {title: 'Delete book'});
 };
 
 module.exports = {
     homelist,
     locationInfo,
     addReview,
-    bookdetails
+    bookdetails,
+    editbook,
+    deletebook
 };
