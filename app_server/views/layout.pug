@@ -1,0 +1,49 @@
+doctype html
+html
+  head
+    //Set the viewport metadata for better display on mobile devices
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title= title
+    //add bootstrap and font awesome css
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/all.min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    nav.navbar.fixed-top.navbar-expand-md.navbar-light
+      .container
+        a.navbar-brand(href='/') Home
+          button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarMain')
+            span.navbar-toggler-icon
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/about/') About Us
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/bookdetails/') Book Details
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/location/review/new/') List Book
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/location/review/new/') Add new book
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/edit/') Edit book
+        #navbarMain.navbar-collapse.collapse
+          ul.navbar-nav.mr-auto
+            li.nav-item
+              a.nav-link(href='/delete/') Delete book
+    .container.content
+      block content
+      footer
+        .row
+          .col-12
+            small &copy; By CityU Seattle Team3 Full Mean Stack Devlepment: BookStroe/2021
+    //bring in jQuery and Popper, needed by Bootstrap
+    script(scr='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anoymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mlykV+2+9J3UJ46iBk0WLaUAdn689aCwoqbBJiSniAK/I8WvCWPIPm49', crossorigin='anonymous')
+    //bring in the bootstrap JavaScript file 
+    script(src='/javascripts/bootstrap.min.js')
