@@ -2,10 +2,6 @@ const homelist = (req,res)=>{
     res.render('home', {title: 'Home'});
 };
 
-const locationInfo = (req, res) =>{
-    res.render('location-info',{title: 'Location info'});
-};
-
 const addReview = (req, res) =>{
     res.render('add-new-book', {title: 'Add review'});
 };
@@ -24,7 +20,6 @@ const deletebook = (req, res) =>{
 
 module.exports = {
     homelist,
-    locationInfo,
     addReview,
     bookdetails,
     editbook,
