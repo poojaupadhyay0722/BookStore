@@ -2,7 +2,7 @@ const homelist = (req,res)=>{
     res.render('home', {title: 'Home'});
 };
 
-const addReview = (req, res) =>{
+const addNewBook = (req, res) =>{
     res.render('add-new-book', {title: 'Add review'});
 };
 
@@ -20,7 +20,7 @@ const deletebook = (req, res) =>{
 
 module.exports = {
     homelist,
-    addReview,
+    addNewBook,
     bookdetails,
     editbook,
     deletebook

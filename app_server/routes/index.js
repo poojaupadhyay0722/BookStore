@@ -5,7 +5,7 @@ const ctrlMain = require ('../controllers/main');
 const ctrlOthers = require('../controllers/others');
 
 router.get('/', ctrlMain.homelist);
-router.get('/addnewbook', ctrlMain.addReview);
+router.get('/addnewbook', ctrlMain.addNewBook);
 router.get('/bookdetails',ctrlMain.bookdetails);
 router.get('/edit',ctrlMain.editbook);
 router.get('/delete',ctrlMain.deletebook);
