@@ -6,9 +6,13 @@ const ctrlOthers = require('../controllers/others');
 
 router.get('/', ctrlMain.homelist);
 router.get('/addnewbook', ctrlMain.addNewBook);
+router.get('/doAddNewBook', ctrlMain.doAddNewBook);
 router.get('/bookdetails',ctrlMain.bookdetails);
 router.get('/edit',ctrlMain.editbook);
 router.get('/delete',ctrlMain.deletebook);
+router.get('/listbooks',ctrlMain.listbook);
+
 router.get('/about', ctrlOthers.about);
+
 
 module.exports = router;
