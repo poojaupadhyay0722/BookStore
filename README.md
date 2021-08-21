@@ -5,5 +5,4 @@ This project contains Book Store application which contains CRUD operations, cre
 To start this application you should follow below command:
 
 NPM install
-=============================
 NPM start
