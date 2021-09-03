@@ -3,15 +3,6 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-// var mongoose = require("mongoose");
-// const BookService = require("./models");
-// mongoose.Promise = global.Promise;
-
-// var uri = "mongodb://localhost:27017/bookstore";
-// mongoose.connect(uri, {
-//   useUnifiedTopology: true,
-//   useNewUrlParser: true,
-// });
 
 const indexRouter = require('./app_server/routes/index');
 const usersRouter = require('./app_server/routes/users');
