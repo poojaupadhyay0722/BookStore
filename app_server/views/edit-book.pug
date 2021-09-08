@@ -2,11 +2,14 @@ extends layout
 block content
     .row.banner
         .col-12
-            h1 Sorry for the inconvenience !!! <br> This page is under contruction !!!  <br> Please visit us again once this page is developed !!! <br> Thank You !!
-            Enter book details to edit
+            h1 Enter book details to edit
     .row
         .col-12.col-md-8
-            form(action="/edit", method="get", role="form")
+            form(action="/edit", method="post", role="form")
+                .form-group.row
+                    label.col-10.col-sm-2.col-form-label(for="Id") Id
+                    .col-12.col-sm-10
+                        input#name.form-control(name="Id")
                 .form-group.row
                     label.col-10.col-sm-2.col-form-label(for="name") Name
                     .col-12.col-sm-10

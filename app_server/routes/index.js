@@ -8,8 +8,11 @@ router.get('/', ctrlMain.homelist);
 router.get('/addnewbook', ctrlMain.addNewBook);
 router.post('/doAddNewBook', ctrlMain.doAddNewBook);
 router.get('/bookdetails',ctrlMain.bookdetails);
-router.get('/edit',ctrlMain.editbook);
+router.post('/bookdetails',ctrlMain.postBookDetails);
+router.post('/edit',ctrlMain.editbook);
+router.get('/edit',ctrlMain.getEditBook);
 router.get('/delete',ctrlMain.deletebook);
+router.post('/delete',ctrlMain.postDeleteBook);
 router.get('/listbooks',ctrlMain.listbook);
 
 router.get('/about', ctrlOthers.about);

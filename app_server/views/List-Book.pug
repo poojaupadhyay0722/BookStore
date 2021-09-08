@@ -6,7 +6,28 @@ block content
     .row
         .col-12.col-md-8
 
-    each element in items
-        li=element.name
+    - var display_books = true
+    if update_error == 1
+        h5 There are no book found with given query! please update query
+        - display_books = false
+    else if update_error == 2
+        h5 There are multiple results found with query
+    else if update_error == 0
+        h5 Successfully update book!
+
+    if display_books
+        each element, i in items
+            p= "BookName: " + element.name 
+                ul 
+                    if element._id
+                        li="Id: " + element._id
+                    if element.author
+                        li="Author: " + element.author
+                    if element.genre 
+                        li="Genre: " + element.genre 
+                    if element.comments
+                        li="Review: " + element.comments
+                br
+
 
     .col-12.col-md-4   
