@@ -32,11 +32,18 @@ const doAddNewBook = (req, res) => {
         const db = client.db(database_name);
 
         db.collection(database_name).insertOne(item, function(err, result){
-                        console.log("item inserted", err);
+                        if (error)
+                        {
+                            console.log("Connection failed for some reason");
+                            client.close();
+                            res.render('add-book-result', {error: 1});
+                            return;
+                        }
+                        console.log("item inserted");
                         client.close();
                 });
     });
-    res.render('add-book-result', {title: 'Your book has been successfully added'});
+    res.render('add-book-result', {error: 0});
 };
 
 const bookdetails = (req, res) =>{
@@ -56,7 +63,7 @@ const editbook = (req, res) =>{
         name: req.body.name,
         author: req.body.author,
         genre: req.body.genre,
-        comments: req.body.comments
+        review: req.body.review
     };
     var id = req.body.Id;
     var results = [];

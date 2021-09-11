@@ -2,7 +2,7 @@ extends layout
 block content
     .row.banner
         .col-12
-            h1 List of books added by the user
+            h1 
     .row
         .col-12.col-md-8
 
@@ -13,7 +13,7 @@ block content
     else if update_error == 2
         h5 There are multiple results found with query
     else if update_error == 0
-        h5 Successfully update book!
+        h5 Operation successfully done! Thank You!!!
 
     if display_books
         each element, i in items
@@ -25,8 +25,8 @@ block content
                         li="Author: " + element.author
                     if element.genre 
                         li="Genre: " + element.genre 
-                    if element.comments
-                        li="Review: " + element.comments
+                    if element.review
+                        li="Review: " + element.review
                 br
 
 

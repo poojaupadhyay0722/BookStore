@@ -14,7 +14,6 @@ router.get('/edit',ctrlMain.getEditBook);
 router.get('/delete',ctrlMain.deletebook);
 router.post('/delete',ctrlMain.postDeleteBook);
 router.get('/listbooks',ctrlMain.listbook);
-
 router.get('/about', ctrlOthers.about);
 
 

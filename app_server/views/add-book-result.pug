@@ -5,7 +5,10 @@ extends layout
 block content
     .row.banner
         .col-12
-            h1.navbar-header Your book has been added!!! 
+            if error == 0
+                h1.navbar-header Your book has been added successfully !!! 
+            else 
+                h1.navbar-header Error happened while add. Please try again !!! 
                 small &nbsp; <br> Please visit us again <br> Thank You !!
     .row
         .col-12.col-md-8
